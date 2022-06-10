@@ -1,0 +1,32 @@
+This is a multi-threaded python ftp server. 
+
+Usage;
+    python3 FtpServer.py <logfile name> <port>
+
+This server listens for incoming connection on specified port to communicate using the Ftp protocol.
+Currently this server supports these commands;
+    USER
+    PASS
+    CWD
+    CDUP
+    QUIT
+    PASV
+    EPSV
+    PORT
+    EPRT
+    RETR
+    STOR
+    PWD
+    LIST
+
+Required Modules;
+    FtpServer.py
+    Log.py
+    Thread.py
+    RequestHandler.py
+    *ftpserverd.conf
+    **creds.txt
+*This is the configuration file and will only accept modes written in 'mode:ON/OFF' form.
+*If configuration file is not present server will revert to defualt modes (PORT = OFF, PASV = ON)
+*Configuration file location must be in project directory
+**If no 'cred.txt' file is provided the server will downgrade to anonymous login mode 
